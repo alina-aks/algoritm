@@ -1,0 +1,5 @@
+f = open("input.txt")
+a,b = map(int, f.readline().split())
+summ = str(a+b)
+k = open("output.txt", "w")
+k.write(summ)
