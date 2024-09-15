@@ -1,10 +1,8 @@
-def f(n):
-    if (n <= 1):
-        return n
-
-    return f(n - 1) + f(n - 2)
 k = open("input.txt")
 n = int(k.readline())
+f1,f2 = 0,1
+for i in range(2,n+1):
+    f1,f2 = f2, (f1+f2)
 y = open("output.txt", "w")
-y.write(str(f(n)))
-print(f(n))
+y.write(str(f2))
+print(f2)
